@@ -13,14 +13,14 @@ local currentShowType
 ----
 --Initializes the frame that holds the matchesTable. Parameters should be moved to conf.lua or aav.lua?
 function AAV_TableGui:createMatchesFrame()
-	local o = CreateFrame("Frame", "AAVMatches", UIParent)
+	local o = CreateFrame("Frame", "AAVMatches", UIParent, BackdropTemplateMixin and "BackdropTemplate")
 	o:SetFrameStrata("HIGH")
 	o:SetPoint("Center", 0, 0)
-	
+
 	o:SetBackdrop({
 	  bgFile="Interface\\DialogFrame\\UI-DialogBox-Background",
 	  edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-	  tile=1, tileSize=10, edgeSize=10, 
+	  tile=1, tileSize=10, edgeSize=10,
 	  insets={left=3, right=3, top=3, bottom=3}
 	})
 	o:SetMovable(true)
@@ -28,22 +28,22 @@ function AAV_TableGui:createMatchesFrame()
 	o:SetScript("OnMouseDown", function(self, button ) o:StartMoving() end)
 	o:SetScript("OnMouseUp", function(self, button ) o:StopMovingOrSizing() end)
 
-	
-	local m = CreateFrame("Frame", "$parentTitle", o)
+
+	local m = CreateFrame("Frame", "$parentTitle", o, BackdropTemplateMixin and "BackdropTemplate")
 	m:SetHeight(30)
 	m:SetPoint("TOP", 0, 18)
 	m:SetBackdrop({
 	  bgFile="Interface\\DialogFrame\\UI-DialogBox-Background",
 	  edgeFile="Interface\\DialogFrame\\UI-DialogBox-Border",
-	  tile=1, tileSize=10, edgeSize=20, 
-	  insets={left=3, right=3, top=3, bottom=3}, 
+	  tile=1, tileSize=10, edgeSize=20,
+	  insets={left=3, right=3, top=3, bottom=3},
 	})
 	m:SetBackdropColor(0, 0, 0, 1) -- 0,0,0,1
 	m:Show()
     m:SetMovable(true)
 	m:SetScript("OnMouseDown", function(self, button) o:StartMoving() end)
 	m:SetScript("OnMouseUp", function(self, button) o:StopMovingOrSizing() end)
-	
+
 
 	local ts = m:CreateFontString("$parentName", "ARTWORK", "GameFontNormal")
 	ts:SetFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
@@ -51,21 +51,21 @@ function AAV_TableGui:createMatchesFrame()
 	ts:SetPoint("CENTER", m, 0, 0)
 	ts:Show()
 	m:SetWidth(ts:GetStringWidth() + 25)
-		
-	
+
+
 	local btn = CreateFrame("Button", "$parentCloseButton", o)
 	btn:SetHeight(32)
 	btn:SetWidth(32)
-	
+
 	btn:SetNormalTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Up")
 	btn:SetPushedTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Down")
 	btn:SetHighlightTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Highlight", "ADD")
-	
+
 	btn:SetPoint("TOPRIGHT" , o, "TOPRIGHT", 0, 0)
 	btn:SetScript("OnClick", function (s, b, d)
 		o:Hide()
 	end)
-	
+
 	matchesFrame = o
 end
 
@@ -82,14 +82,14 @@ function AAV_TableGui:showMatchesFrame()
 		local width, height = matchesTable.frame:GetSize()
 		matchesTable.frame:SetPoint("CENTER",0,-15)
 		matchesFrame:SetWidth(width)
-		matchesFrame:SetHeight(height + 30)		
+		matchesFrame:SetHeight(height + 30)
 	end
 	if(atroxArenaViewerData.data and atroxArenaViewerData.data[1] and matchesTable.data and matchesTable.data[1]) then
 		-- Quick check to see if the table needs to be updated: if the table has the most recent game and the same number of rows as games recorded then no update required
 		if (atroxArenaViewerData.current.showBySpec ~= currentShowType or atroxArenaViewerData.data[1]["startTime"] ~= matchesTable.data[1].cols[1]["value"] or #atroxArenaViewerData.data ~= #matchesTable.data) then
 			self:fillMatchesTable()
 			currentShowType = atroxArenaViewerData.current.showBySpec
-		end			
+		end
 	else
 		self:fillMatchesTable()
 	end
@@ -134,21 +134,21 @@ function AAV_TableGui:createMatchesTable()
 		}, -- [3]
 		{
 			["name"] = " ",
-			["width"] = 285,		
+			["width"] = 285,
 		}, -- [4]
 		{
 			["name"] = "Result",
-			["width"] = 50,		
+			["width"] = 50,
 		}, -- [5]
 		{
 			["name"] = "Rating",
-			["width"] = 100,		
+			["width"] = 100,
 		}, -- [6]
 		{
 			["name"] = " ",
-			["width"] = 50,		
+			["width"] = 50,
 		}, -- [7]
-	}; 
+	};
 
 	matchesTable = ScrollingTable:CreateST(cols, 20, 22, nil, matchesFrame);
 	matchesTable:RegisterEvents({
@@ -171,7 +171,7 @@ end
 
 ----
 -- Fills in the data in the matches results table. Called by showMatchesFrame().
-function AAV_TableGui:fillMatchesTable()	
+function AAV_TableGui:fillMatchesTable()
 	local data = {}
 	if(atroxArenaViewerData.data and atroxArenaViewerData.data[1]) then
 		local deleteColor  = { ["r"] = 1.0, ["g"] = 0.0, ["b"] = 0.0, ["a"] = 1.0 };
@@ -182,7 +182,7 @@ function AAV_TableGui:fillMatchesTable()
 				data[row] = {};
 			end
 			data[row].cols = {};
-			
+
 			-- start time
 			data[row].cols[1] = { ["value"] = atroxArenaViewerData.data[row]["startTime"] };
 

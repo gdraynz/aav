@@ -4,7 +4,7 @@ AAV_Util.__index = AAV_Util
 ----
 -- skills will be shown additionally on the player's icon frame.
 -- credits: gladius
-AAV_IMPORTANTSKILLS = {	
+AAV_IMPORTANTSKILLS = {
 	[64058]		= 3, 	-- Psychic Horror
 	[137143]	= 3,	-- Blood Horror
 	[6789]		= 3,	-- Mortal Coil
@@ -30,8 +30,8 @@ AAV_IMPORTANTSKILLS = {
 	[18647]		= 3,	-- Banish
 	[87204] 	= 3, 	-- Sin and Punishment
 	[605]		= 3, 	-- Dominate Mind
-	
-		
+
+
 	-- Roots
 	[102359]	= 2,	-- Mass Entanglement
 	[111340]	= 2,	-- Ice Ward
@@ -51,8 +51,8 @@ AAV_IMPORTANTSKILLS = {
 	[115197] 	= 2, 	-- Partial Paralysis ( Rogue shiv para )
 	[63685] 	= 2, 	-- Frost Shock (Frozen Power talent)
 	[96294] 	= 2, 	-- Chains of Ice
-		
-			
+
+
 
 	-- Stuns and incapacitates
 	[103131] 	= 3,	-- Axe Toss (Felguard)
@@ -62,10 +62,10 @@ AAV_IMPORTANTSKILLS = {
 	[122242] 	= 3, 	-- Clash
 	[119392] 	= 3, 	-- Charging Ox Wave
 	[7922] 		= 3,	-- Charge Stun
-	[118895] 	= 3, 	-- Dragon Roar 	
+	[118895] 	= 3, 	-- Dragon Roar
 	[77505]		= 3, 	-- Earthquake
-	[20549] 	= 3, 	-- War Stomp	
-	[19577] 	= 3,	-- Intimidation (stun)			
+	[20549] 	= 3, 	-- War Stomp
+	[19577] 	= 3,	-- Intimidation (stun)
 	[126246] 	= 3,	-- Lullaby (Crane Pet)
 	[126423] 	= 3,	-- Petrifying Gaze (Basilisk Pet)
 	[126355] 	= 3,	-- Paralyzing Quill(Porcupine Pet)
@@ -106,25 +106,25 @@ AAV_IMPORTANTSKILLS = {
 	[82691]  	= 3, 	-- Ring of Frost
 	[31661] 	= 3, 	-- Dragon's Breath
 	[1513] 		= 3, 	-- Scare Beast
-		
+
 		-- Silences
 	[55021] 	= 1,	-- Improved Counterspell
 	[15487] 	= 1, 	-- Silence
-	[34490] 	= 1, 	-- Silencing Shot	
+	[34490] 	= 1, 	-- Silencing Shot
 	[47476]		= 1,	-- Strangulate
-	[96231]   	= 1,  	-- Rebuke                
+	[96231]   	= 1,  	-- Rebuke
 	[80964]   	= 1,  	-- Skull Bash
 	[1330]     	= 1,  	-- Garrote
 	[78675]		= 1, 	-- Solar Beam
 	[113286]	= 1,	-- Solar Beam ( Symbiosis )
 	[137460]	= 1,	-- Silence (Ring of Peace)
 	[116709] 	= 1, 	-- Spear Hand Strike
-				
+
 	-- Disarms
 	[676] 	   	= 1, 	-- Disarm
 	[51722] 	= 1,	-- Dismantle
 	[117368]	= 1,	-- Grapple Weapon
-						
+
 	-- Buffs
 	[1022] 		= 1,	-- Blessing of Protection
 	[1044] 		= 1, 	-- Blessing of Freedom
@@ -136,8 +136,8 @@ AAV_IMPORTANTSKILLS = {
 	[118009]	= 1, 	-- Desecrated Ground (DK lvl90 anti-CC)
 	[12292] 	= 1, 	-- Death Wish
     [49016] 	= 1, 	-- Unholy Frenzy
-	
-		
+
+
 	-- Turtling abilities
 	[871]		= 1,	-- Shield Wall
 	[48707]		= 1,	-- Anti-Magic Shell
@@ -150,7 +150,7 @@ AAV_IMPORTANTSKILLS = {
 	[47788] 	= 1, 	-- Guardian Spirit
 	[116849]	= 1, 	-- Life Cocoon
 	[53480] 	= 1, 	-- Roar of Sacrifice
-		
+
 	-- Immunities
 	[110696]	= 3,	-- Symbiosis Ice Block
 	[34692]		= 3, 	-- The Beast Within
@@ -158,7 +158,7 @@ AAV_IMPORTANTSKILLS = {
 	[642] 		= 3,	-- Divine Shield
 	[110913] 	= 3,	-- Dark Bargain
 	[125174]	= 1,	-- Touch of Karma
-	
+
 	--Others
 	[51755] = 1, 	-- Camouflage
 }
@@ -166,7 +166,7 @@ AAV_IMPORTANTSKILLS = {
 ----
 --
 AAV_CCSKILS = {
-	
+
 	-- WARRIOR
 	--[47486] = 6,	-- Mortal Strike
 	--[6544]  = 45, -- Heroic Leap
@@ -180,7 +180,7 @@ AAV_CCSKILS = {
 	[11578]	= 12,	-- Charge
 	[1719]	= 180, 	-- Recklessness
 	[23920]	= 25,	-- Spell Reflection
-	[3411]	= 30,	-- Safeguard	
+	[3411]	= 30,	-- Safeguard
 	[12975]	= 180,	-- Rallying Cry
 	[46968]	= 20,	-- Shockwave  40 or 20
 	[107574]= 180,  -- Avatar
@@ -207,7 +207,7 @@ AAV_CCSKILS = {
 	[88625] = 30,	-- Chastise
 	[73325] = 90,	-- Leap of Faith
 	[62618] = 180,	-- Power Word: Barrier
-	
+
 	-- DRUID
 	[61336]	= 180,	-- Survival Instincts
 	[50334]	= 180,	-- Berserk
@@ -260,7 +260,7 @@ AAV_CCSKILS = {
 	[12472]	= 180,	-- Icy Veins
 	[113724]= 45,	-- Ring of Frost
 	[84714] = 60,	-- Frozen Orb
-	
+
 	-- PALADIN
 	[498] 	= 60, 	-- Divine Protection
 	[20271] = 6, 	-- Judgement of Light
@@ -280,7 +280,7 @@ AAV_CCSKILS = {
 	[86669] = 180,	-- Guardian of Ancient Kings  holy
 	[86659] = 180,	-- Guardian of Ancient Kings  prot
 	[115750]= 120,	-- Blinding Light
-	
+
 	-- HUNTER
 	--[51753] = 60,	-- Camouflage
 	[781]	= 20,	-- Disengage
@@ -298,7 +298,7 @@ AAV_CCSKILS = {
 	[19574]	= 60,	-- Bestial Wrath
 	[90337]	= 120,	-- Bad Manner (Pet Blind)
 	[53480] = 60,	-- Roar of Sacrifice
-	
+
 	-- DEATHKNIGHT
 	[49576]	= 25,	-- Death Grip
 	[47476]	= 60,	-- Strangulate
@@ -314,7 +314,7 @@ AAV_CCSKILS = {
 	[51271] = 60,	-- Pillar of Frost
 	[91797] = 60,	-- Monstrous Blow
 	[91802] = 30,	-- Shambling Rush
-	
+
 	-- ROGUE
 	[1784]	= 6,	-- Stealth
 	[1776]	= 10,	-- Gouge
@@ -335,7 +335,7 @@ AAV_CCSKILS = {
 	[76577] = 180,	-- Smoke Bomb
 	[74001] = 120,	-- Combat Readiness
 	[73981] = 60,	-- Redirect
-	
+
 	-- SHAMAN
 	[57994] = 12,	-- Wind Shear
 	[8177] 	= 25,	-- Grounding Totem
@@ -356,7 +356,7 @@ AAV_CCSKILS = {
 	[8143]	= 60,	-- Tremor Totem
 	[114049]= 180,	-- Ascendance
 	[108269]= 45, 	-- Capacitor Totem
-	
+
 	--MONK
 	--[115078] = 15,	-- Paralysis
 	[113656] = 25,		-- Fists of Fury
@@ -377,8 +377,8 @@ AAV_CCSKILS = {
 	[115176] = 180,		-- Zen Meditation
 	[101643] = 45,		-- Trascendence
 	[122470] = 90,		-- Touch of Karma
-	
-			
+
+
 	-- GENERAL
 	[59752]	= 120,	-- Every Man for Himself
 	[42292]	= 120,	-- PvP Trinket
@@ -428,9 +428,9 @@ end
 -- @param data player data
 -- @param urgent use class colors
 function AAV_Util:getTargetColor(data, urgent)
-	
+
 	if (not atroxArenaViewerData.defaults.profile.uniquecolor or urgent) then
-	
+
 		if (data.class == "DEATHKNIGHT") then
 			return 0.77, 0.12, 0.23
 		elseif (data.class == "DRUID") then
@@ -456,7 +456,7 @@ function AAV_Util:getTargetColor(data, urgent)
 		elseif (data.class == "DEMONHUNTER") then
 			return 0.64, 0.19, 0.79
 		end
-		
+
 	else
 		local id = data.ID
 		if (id == 0) then
